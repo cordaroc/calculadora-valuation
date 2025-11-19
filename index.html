@@ -34,10 +34,29 @@
       <div id="camposBasicos" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
     </div>
 
-    <!-- Resultados -->
-    <div id="resultados"></div>
+    <!-- Área de Exportação -->
+    <div id="areaExportacao">
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold mb-2">📈 Valuation por Cenário</h2>
+        <img src="assets/valuation_cenarios.png" alt="Gráfico de Valuation por Cenário" class="w-full rounded shadow" />
+      </div>
+
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold mb-2">📊 Simulação Monte Carlo (10.000 cenários)</h2>
+        <img src="assets/histograma_valuation_monte_carlo.png" alt="Histograma de Valuation Monte Carlo" class="w-full rounded shadow" />
+      </div>
+
+      <div id="resultados"></div>
+
+      <div class="mt-6">
+        <button onclick="exportarPDF()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          📄 Exportar resultados em PDF
+        </button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </body>
 </html>

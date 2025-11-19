@@ -1,0 +1,12 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.input-editado {
+  border: 2px solid #facc15;
+  background-color: #fef9c3;
+}
+
+.input-auto {
+  border: 1px solid #ccc;
+}
