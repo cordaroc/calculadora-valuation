@@ -92,10 +92,17 @@ function carregarMultiplosSetoriais(setor) {
 function exportarPDF() {
   const elemento = document.getElementById('areaExportacao');
 
-  html2pdf()
+ html2pdf()
     .set({
       margin: 10,
       filename: 'resultado_valuation.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
-      jsPDF: { unit
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    })
+    .from(elemento)
+    .save();
+}
+
+renderCamposBasicos();
+Atualização: layout de exportação em PDF e gráficos
