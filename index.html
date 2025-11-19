@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Valuation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 p-6">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">📊 Calculadora de Valuation Profissional</h1>
+
+    <!-- Seletor de Ticker e Setor -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div>
+        <label class="block font-semibold mb-1">Ticker</label>
+        <input id="inputTicker" type="text" class="w-full p-2 border rounded" placeholder="Ex: AXIA3" />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Setor/Subsetor</label>
+        <select id="inputSetor" class="w-full p-2 border rounded">
+          <option value="">Selecione...</option>
+          <option value="energia-distribuicao">Energia: Distribuição</option>
+          <option value="energia-transmissao">Energia: Transmissão</option>
+          <option value="bancos">Financeiro: Bancos</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Dados Básicos -->
+    <div id="dadosBasicos" class="bg-white p-4 rounded shadow">
+      <h2 class="text-xl font-semibold mb-4">📌 Dados Básicos</h2>
+      <div id="camposBasicos" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+
+    <!-- Resultados -->
+    <div id="resultados"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
