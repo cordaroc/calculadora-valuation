@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste AXIA3</title>
+  <script>
+    const dadosAXIA3 = {
+      precoAtual: 61.05,
+      numAcoes: 2308632600,
+      dividaLiquida: 42580000000
+    };
+
+    function renderizar() {
+      const ticker = document.getElementById('ticker').value.toUpperCase();
+      const container = document.getElementById('resultado');
+      container.innerHTML = '';
+
+      if (ticker === 'AXIA3') {
+        Object.entries(dadosAXIA3).forEach(([chave, valor]) => {
+          const p = document.createElement('p');
+          p.textContent = `${chave}: ${valor}`;
+          container.appendChild(p);
+        });
+      } else {
+        container.textContent = 'Ticker não reconhecido.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Teste de Dados Básicos</h1>
+  <input id="ticker" type="text" placeholder="Digite AXIA3" />
+  <button onclick="renderizar()">Carregar</button>
+  <div id="resultado" style="margin-top: 20px;"></div>
+</body>
+</html>
