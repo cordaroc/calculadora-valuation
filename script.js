@@ -23,7 +23,10 @@ const camposPadrao = {
 };
 
 function formatarNumero(valor) {
-  return Number(valor).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return Number(valor).toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 }
 
 function renderCamposBasicos() {
@@ -92,7 +95,7 @@ function carregarMultiplosSetoriais(setor) {
 function exportarPDF() {
   const elemento = document.getElementById('areaExportacao');
 
- html2pdf()
+  html2pdf()
     .set({
       margin: 10,
       filename: 'resultado_valuation.pdf',
@@ -105,5 +108,4 @@ function exportarPDF() {
 }
 
 renderCamposBasicos();
-
-Corrigido erro de sintaxe no final do script.js
+Corrigido erro de sintaxe
