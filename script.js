@@ -109,4 +109,5 @@ function exportarPDF() {
 
 renderCamposBasicos();
 
-Corrigido erro de sintaxe no final do script.js
+//Corrigido erro de sintaxe no final do script.js
+
