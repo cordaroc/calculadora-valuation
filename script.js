@@ -105,4 +105,5 @@ function exportarPDF() {
 }
 
 renderCamposBasicos();
-Atualização: layout de exportação em PDF e gráficos
+
+Corrigido erro de sintaxe no final do script.js
